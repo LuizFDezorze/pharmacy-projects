@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if request.user.is_authenticated %}
+    Bem vindo {{request.username}}!
+    <h1>Área Restrita</h1>
+{% else %}
+    Você não tem permissão para acessar essa área.
+    <div>
+        <a href="/"> Voltar </a>
+    </div>
+{% endif %}
+
+{% endblock content %}
