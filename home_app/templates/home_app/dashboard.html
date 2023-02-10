@@ -3,6 +3,7 @@
 {% if request.user.is_authenticated %}
     Bem vindo {{request.username}}!
     <h1>Área Restrita</h1>
+    <a href="/logouts/">Sair</a>
 {% else %}
     Você não tem permissão para acessar essa área.
     <div>
