@@ -2,6 +2,11 @@
 {% block content %}
 <form name="form-user" id="formUsers" method="post" action="/store/">
     <div class="col-6 mt-4 m-auto">
+        {% if msg %}
+        <div class="alert {{ class }}">
+            {{msg}}
+        </div>
+        {% endif %}
         {% csrf_token %}
         <input class="form-control mt-4" type="text" name="name" id="name" placeholder="Nome">
         <input class="form-control mt-4" type="text" name="user" id="user" placeholder="Usuário">
