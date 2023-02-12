@@ -29,7 +29,7 @@ def store(request):
 
 # pag de login
 def loginpage(request):
-    return render(request, 'home_app/login_page.html')
+    return render(request, 'home_app/loginpage.html')
 
 # processa o login
 def dologin(request):
@@ -41,7 +41,7 @@ def dologin(request):
     else: 
         data['msg'] = 'Usuário ou senha inválidos!'
         data['class'] = 'alert-danger'
-        return render(request, 'home_app/login_page.html', data)
+        return render(request, 'home_app/loginpage.html', data)
 
 
 # area privada
@@ -53,6 +53,5 @@ def logouts(request):
     logout(request)
     return redirect('loginpage')
 
-def changePassword(request):
-    return render(request, 'home_app/changePassword.html')
+
  

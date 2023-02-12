@@ -10,6 +10,6 @@ urlpatterns = [
     path('dologin/', views.dologin, name="dologin"),
     path('dashboard/', views.dashboard, name="dashboard"),
     path('logouts/', views.logouts, name="logouts"),
-    path('changePassword/', views.changePassword, name="changePassword"),
+
 
 ]
